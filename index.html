@@ -7,13 +7,13 @@
 <!-- SEARCH ENGINE BASICS: these lines are what Google shows in results -->
 <title>2012happens – All The Mods 11 (ATM11) Let's Play & Modded Minecraft Streams</title>
 <meta name="description" content="2012happens streams modded Minecraft, with a full All The Mods 11 (ATM11) let's play series, plus RimWorld, The Long Drive, and early-game ATM11 tips learned along the way.">
-<link rel="canonical" href="https://www.youtube.com/@2012happens">
+<link rel="canonical" href="https://YOUR-SITE-ADDRESS/">
 
 <!-- How the link looks when shared on Discord, Reddit, Facebook -->
 <meta property="og:title" content="2012happens – All The Mods 11 Let's Play">
 <meta property="og:description" content="Modded Minecraft streams and an ATM11 series from start to endgame.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://https://www.youtube.com/@2012happens">
+<meta property="og:url" content="https://YOUR-SITE-ADDRESS/">
 
 <script type="application/ld+json">
 {
@@ -126,9 +126,15 @@
   <section>
     <div class="wrap">
       <h2>Latest ATM11 episode</h2>
-      <p class="sub">Replace LATEST_VIDEO_ID below with the ID from your newest video's link (the part after <code>watch?v=</code>).</p>
-      <div class="player" id="player" data-id="LATEST_VIDEO_ID">
-        <button type="button">Play the latest episode</button>
+      <p class="sub">The newest stream from the channel, updated automatically.</p>
+      <div class="player">
+        <!-- UULV = past live streams. Use UU for all uploads, or UULF for regular videos only. -->
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/videoseries?list=UULV2tsY40KbWbmEktQ6odPdEQ"
+          title="Latest 2012happens stream"
+          loading="lazy"
+          allow="encrypted-media; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -214,17 +220,5 @@
   </div>
 </footer>
 
-<script>
-  // Click-to-load player: shows the thumbnail first, loads YouTube only when clicked
-  const p = document.getElementById('player');
-  const id = p.dataset.id;
-  if (id && id !== 'LATEST_VIDEO_ID') {
-    p.style.backgroundImage = `url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)`;
-  }
-  p.querySelector('button').addEventListener('click', () => {
-    if (!id || id === 'LATEST_VIDEO_ID') return;
-    p.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1" title="Latest episode" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
-  });
-</script>
 </body>
 </html>
